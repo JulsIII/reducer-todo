@@ -1,0 +1,4 @@
+.item.completed {
+    color: #FF0000;
+    text-decoration: line-through;
+}
