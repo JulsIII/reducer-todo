@@ -2,16 +2,16 @@
 export const initialState = {
     todos:[
         {
-        title:"todo 1",
+        title:"tofghdo 1",
+        id: 0,
+        completed: false
+        },{
+        title:"tofghdo 2",
         id: 1,
         completed: false
         },{
-        title:"todo 2",
-        id: 1,
-        completed: false
-        },{
-        title:"todo 3",
-        id: 1,
+        title:"tofhdo 3",
+        id: 2,
         completed: false
         }
     ]
@@ -20,14 +20,15 @@ export const initialState = {
 const reducer = (state, action) => {
 
     switch(action.type) {
-        case('ADD_TODO'):
+        case("ADD_TODO"):
              const newTodo = {
                  id: state.todos.length,
                  completed: false,
                  title: action.payload
              };
-
+             console.log("redc", action);
             return({...state, todos:[...state.todos, newTodo]});
+            
         case("TOGGLE_COMPLETED"):
              //map through each todo
              //if todo has the id we want(in action payload), return copy of that item with completed flipped
@@ -39,8 +40,9 @@ const reducer = (state, action) => {
                     return(todo);
                 }
             })});
+
         default: 
-        return state;
+            return state;
     }
 }
 

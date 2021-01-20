@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.completed {
+  color: #FF0000;
+  text-decoration: line-through;
+}

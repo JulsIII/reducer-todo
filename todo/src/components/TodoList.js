@@ -1,5 +1,5 @@
 import React from 'react';
-import Todo from './components/Todo';
+import Todo from './Todo';
 
 const TodoList = (props) => {
 
@@ -12,9 +12,6 @@ const TodoList = (props) => {
         return(<Todo todo={todo}/>);
       })
       }
-      <li>todo 1</li>
-      <li>todo 2</li>
-      <li>todo 3</li>
     </ul>
     <button>Clear Completed</button>
   </div>);

@@ -7,13 +7,12 @@ state = {
 }
 
 handleSubmit = (e) => {
-    e.prevent.deafult();
+    e.preventDefault();
     this.props.handleAddTodo(this.state.inputText);
 }
 
 handleChange = (e) => {
-
-    this.state({
+    this.setState({
         inputText:e.target.value
     });
 }
@@ -26,11 +25,11 @@ handleChange = (e) => {
                       Title:
                      <input onChange={this.handleChange} value={this.state.inputText}/>
                 </lable>
-                 <button>Submit Item</button>
+                 <button>Submit Todo</button>
                 </form>
             </div>
             );
     }
 }
 
-export deafult TodoForm; 
+export default TodoForm; 
