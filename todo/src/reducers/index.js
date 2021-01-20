@@ -26,7 +26,6 @@ const reducer = (state, action) => {
                  completed: false,
                  title: action.payload
              };
-            //  console.log("redc", action);
             return({...state, todos:[...state.todos, newTodo]});
             
         case("TOGGLE_COMPLETED"):
@@ -40,7 +39,13 @@ const reducer = (state, action) => {
                     return(todo);
                 }
             })});
-
+        case("CLEAR_COMPLETED"):
+            return {
+                ...state,
+                todos: state.todos.filter( todo=> {
+                    return(!todo.completed);
+                })
+            }
         default: 
             return state;
     }

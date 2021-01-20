@@ -13,3 +13,7 @@ export const toggleCompleted = id => {
         payload: id
     });
 }
+
+export const clearCompleted = () => {
+    return({type: "CLEAR_COMPLETED"});
+}
