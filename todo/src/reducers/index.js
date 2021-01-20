@@ -26,7 +26,7 @@ const reducer = (state, action) => {
                  completed: false,
                  title: action.payload
              };
-             console.log("redc", action);
+            //  console.log("redc", action);
             return({...state, todos:[...state.todos, newTodo]});
             
         case("TOGGLE_COMPLETED"):

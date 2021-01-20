@@ -15,21 +15,18 @@ function App() {
     dispatch(addTodo(title));
   }
 
-  // const handleToggleCompleted = (id) => {
-  //   dispatch(toggleCompleted(0));
-  // }
+  const handleToggleCompleted = (id) => {
+    dispatch(toggleCompleted(id));
+  }
 
-  // const handleClick = () => {
-  //   dispatch(addTodo("FUCK FUCK"));
-  // }
 
-console.log("asd", state);
+// console.log("AppState", state);
 
   return (
     <div className="App">
       <h1>Todo App</h1>
-      {/* <button onClick={handleClick}>test btn</button> */}
-    <TodoList todos={state.todos} />
+      {/* <button onClick={handleToggleCompleted}>test btn</button> */}
+    <TodoList todos={state.todos} handleToggleCompleted={handleToggleCompleted} />
     <TodoForm handleAddTodo={handleAddTodo}/>
     </div>
   );
