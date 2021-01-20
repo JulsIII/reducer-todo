@@ -1,21 +1,10 @@
 import React from 'react';
 
-const TodoList = (props) => {
+const Todo = (props) => {
 
-    <div>
-    <h3>List of Items</h3>
-    <ul>
-      {TodoList.map(todo => {
-        return(<li>{todo.title}</li>);
-      })
-      }
-      <li>todo 1</li>
-      <li>todo 2</li>
-      <li>todo 3</li>
-    </ul>
-    <button>Clear Completed</button>
-  </div>
+const {todo} = props; 
+return(<li className={todo.completed ? "completed":""}>{todo.title}</li>);
 
 }
 
-export default TodoList;
+export default Todo;
