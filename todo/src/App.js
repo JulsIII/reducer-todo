@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import TodoList from './components/TodoList';
@@ -22,7 +21,6 @@ function App() {
   const handleClearCompleted = () => {
     dispatch(clearCompleted());
   }
-// console.log("AppState", state);
 
   return (
     <div className="App">
