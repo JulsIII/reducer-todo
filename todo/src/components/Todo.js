@@ -1,15 +1,21 @@
 import React from 'react';
 
-const Item = props => {
-    const handleClick = ()=> {
-    props.handleItemToggle(props.item.id);
+const TodoList = (props) => {
 
-    }
-    return (
-        <div onClick={handleClick} className={`item${props.item.completed ? ' completed' : ''}`}>
-            <p>{props.item.name}</p>
-        </div>
-    );
-};
+    <div>
+    <h3>List of Items</h3>
+    <ul>
+      {TodoList.map(todo => {
+        return(<li>{todo.title}</li>);
+      })
+      }
+      <li>todo 1</li>
+      <li>todo 2</li>
+      <li>todo 3</li>
+    </ul>
+    <button>Clear Completed</button>
+  </div>
 
-export default Item;
+}
+
+export default TodoList;
